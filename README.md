@@ -1,10 +1,11 @@
 # Cause Effect App
 * Project based on [Florinpop17 app-ideas](https://github.com/florinpop17/app-ideas)
 
-Pure JavaScript that display item details when clicking in list item.
+native and responsive HTML/CSS/JavaScript website that display item details when clicking in list item.
 
 ## The project:
 
+https://user-images.githubusercontent.com/50121055/154960264-e4d44a14-f9f4-4cba-81fe-7bf83efaf281.mp4
 
 
 ---
