@@ -1,7 +1,7 @@
 # Cause Effect App
 * Project based on [Florinpop17 app-ideas](https://github.com/florinpop17/app-ideas)
 
-native and responsive HTML/CSS/JavaScript website that display item details when clicking in list item.
+Native and responsive HTML/CSS/JavaScript website that display item details when clicking in list item.
 
 ## The project:
 
