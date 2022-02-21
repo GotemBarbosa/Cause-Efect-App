@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cause-effect-app</title>
+    <link rel="stylesheet" href="./styles.css">
+
+</head>
+<body>
+    <div class="sidebar">
+        <h2>Name list:</h2>
+        <ul class="list">
+
+        </ul>
+    </div>
+    <div class="mobile-button">
+
+    </div>
+    <div class="content" id="content">       
+        <h2>Client data</h2>
+        <div class="personData">
+            <div class="data">
+                <h3>Name:</h3>
+                <p class="name-datum"></p>
+            </div>
+            
+            <div class="data">
+                <h3>Street:</h3>
+                <p class="street-datum"></p>
+            </div>
+            <div class="data">
+                <h3>City:</h3>
+                <p class="city-datum"></p>
+            </div>
+        </div>
+        <div class="personData">
+            
+            <div class="data">
+                <h3>State:</h3>
+                <p class="state-datum"></p>
+            </div>
+            <div class="data">
+                <h3>Country:</h3>
+                <p class="country-datum"></p>
+            </div>
+            <div class="data">
+                <h3>Telephone:</h3>
+                <p class="telephone-datum"></p>
+            </div>
+        </div>
+        <div class="personData">
+            
+            <div class="data">
+                <h3>Birthday:</h3>
+                <p class="birthday-datum"></p>
+            </div>
+        </div>
+    </div>
+    
+</body>
+<script>
+    
+const people =[{
+  name: "Gabriel Barbosa",
+  street: "unknown",
+  city: "São Paulo",
+  state: "São Paulo",
+  country: "Brazil",
+  telephone: "811-859-6194",
+  birthday: "3/26/2003"
+}, {
+  name: "Lauren Euston",
+  street: "Pawling",
+  city: "São Paulo",
+  state: "São Paulo",
+  country: "Brazil",
+  telephone: "811-859-6194",
+  birthday: "6/18/2002"
+}, {
+  name: "Toma Ditchett",
+  street: "Kennedy",
+  city: "São Paulo",
+  state: "São Paulo",
+  country: "Brazil",
+  telephone: "832-435-4045",
+  birthday: "1/3/2004"
+}, {
+  name: "Pete Fonquernie",
+  street: "Mesta",
+  city: "São Paulo",
+  state: "São Paulo",
+  country: "Brazil",
+  telephone: "803-122-4382",
+  birthday: "11/5/2004"
+}, {
+  name: "Alano Fitzsymonds",
+  street: "Sage",
+  city: "São Paulo",
+  state: "São Paulo",
+  country: "Brazil",
+  telephone: "890-539-8309",
+  birthday: "11/19/2007"
+}, {
+  name: "Lilith Tolerton",
+  street: "Lakeland",
+  city: "São Paulo",
+  state: "São Paulo",
+  country: "Brazil",
+  telephone: "389-233-4602",
+  birthday: "5/13/2002"
+}, {
+  name: "Larry Lombardo",
+  street: "Fordem",
+  city: "São Paulo",
+  state: "São Paulo",
+  country: "Brazil",
+  telephone: "904-699-8700",
+  birthday: "11/24/2011"
+}, {
+  name: "Joan Janny",
+  street: "Hauk",
+  city: "São Paulo",
+  state: "São Paulo",
+  country: "Brazil",
+  telephone: "246-572-7713",
+  birthday: "10/25/1999"
+}, {
+  name: "Tommy Robel",
+  street: "Miller",
+  city: "São Paulo",
+  state: "São Paulo",
+  country: "Brazil",
+  telephone: "865-798-3464",
+  birthday: "10/11/2000"
+}, {
+  name: "Julian Penson",
+  street: "Granby",
+  city: "São Paulo",
+  state: "São Paulo",
+  country: "Brazil",
+  telephone: "658-856-9714",
+  birthday: "5/1/2006"
+}, {
+  name: "Granthem Gallacher",
+  street: "Fisk",
+  city: "São Paulo",
+  state: "São Paulo",
+  country: "Brazil",
+  telephone: "974-828-3123",
+  birthday: "10/7/1999"
+}, {
+  name: "Normand Moseley",
+  street: "Dawn",
+  city: "São Paulo",
+  state: "São Paulo",
+  country: "Brazil",
+  telephone: "798-871-1743",
+  birthday: "6/9/2011"
+}, {
+  name: "Julio Salamoli",
+  street: "Forster",
+  city: "São Paulo",
+  state: "São Paulo",
+  country: "Brazil",
+  telephone: "624-703-4164",
+  birthday: "5/12/2010"
+}, {
+  name: "Idelle Hazeup",
+  street: "Mallory",
+  city: "São Paulo",
+  state: "São Paulo",
+  country: "Brazil",
+  telephone: "121-871-2731",
+  birthday: "2/4/2005"
+}, {
+  name: "Lanny Greiser",
+  street: "Veith",
+  city: "São Paulo",
+  state: "São Paulo",
+  country: "Brazil",
+  telephone: "248-101-3349",
+  birthday: "5/28/2004"
+}, {
+  name: "Adi Cockley",
+  street: "Clove",
+  city: "São Paulo",
+  state: "São Paulo",
+  country: "Brazil",
+  telephone: "585-974-7365",
+  birthday: "7/21/2003"
+}, {
+  name: "Andrea MacArthur",
+  street: "Canary",
+  city: "São Paulo",
+  state: "São Paulo",
+  country: "Brazil",
+  telephone: "177-130-8830",
+  birthday: "7/8/2007"
+}, {
+  name: "Hewet Demaine",
+  street: "Becker",
+  city: "São Paulo",
+  state: "São Paulo",
+  country: "Brazil",
+  telephone: "177-662-3084",
+  birthday: "11/21/2009"
+}, {
+  name: "Christabel Ashment",
+  street: "Havey",
+  city: "São Paulo",
+  state: "São Paulo",
+  country: "Brazil",
+  telephone: "257-625-9615",
+  birthday: "7/22/2009"
+}, {
+  name: "Sheppard Montacute",
+  street: "Bultman",
+  city: "São Paulo",
+  state: "São Paulo",
+  country: "Brazil",
+  telephone: "222-746-9016",
+  birthday: "9/3/2007"
+}, {
+  name: "Ker MacMarcuis",
+  street: "Maple Wood",
+  city: "São Paulo",
+  state: "São Paulo",
+  country: "Brazil",
+  telephone: "136-115-0453",
+  birthday: "1/17/2002"
+}, {
+  name: "Jessy Kensall",
+  street: "Banding",
+  city: "São Paulo",
+  state: "São Paulo",
+  country: "Brazil",
+  telephone: "734-300-2142",
+  birthday: "11/2/2002"
+}, {
+  name: "Stevena Morgan",
+  street: "Karstens",
+  city: "São Paulo",
+  state: "São Paulo",
+  country: "Brazil",
+  telephone: "722-853-7837",
+  birthday: "5/12/2003"
+}, {
+  name: "Manfred D'Adda",
+  street: "Moose",
+  city: "São Paulo",
+  state: "São Paulo",
+  country: "Brazil",
+  telephone: "691-423-8279",
+  birthday: "7/9/2003"
+}, {
+  name: "Corry Antonopoulos",
+  street: "Basil",
+  city: "São Paulo",
+  state: "São Paulo",
+  country: "Brazil",
+  telephone: "669-717-3310",
+  birthday: "12/10/2005"
+}, {
+  name: "Yasmin Kauane",
+  street: "Linden",
+  city: "São Paulo",
+  state: "São Paulo",
+  country: "Brazil",
+  telephone: "160-204-1627",
+  birthday: "4/1/2005"
+}]
+    
+    document.body.onload = addList;
+
+    //Change the content values
+    function changeContent(item){
+        let name = document.querySelector(".name-datum")
+        let street = document.querySelector(".street-datum")
+        let city = document.querySelector(".city-datum")
+        let state = document.querySelector(".state-datum")
+        let country = document.querySelector(".country-datum")
+        let telephone = document.querySelector(".telephone-datum")
+        let birthday = document.querySelector(".birthday-datum")
+
+        name.innerHTML = item.name
+        street.innerHTML = item.street
+        city.innerHTML = item.city
+        state.innerHTML = item.state
+        country.innerHTML = item.country
+        telephone.innerHTML = item.telephone
+        birthday.innerHTML = item.birthday
+    }
+    //Add the people list in the website sidebar and handle the click event listener to change de website values
+    function addList(){
+        people.forEach((item,index)=>{
+            let itemList = document.createElement("li")
+            itemList.className = "listElement";
+            itemList.id = index
+            itemList.innerHTML = item.name;
+            itemList.addEventListener('click', event=>{
+               changeContent(item)
+               people.forEach((person, personIndex)=>{    
+                   let obj = document.getElementById(personIndex)
+                   if(document.getElementById(personIndex).className != "listElement"){
+                       document.getElementById(personIndex).className = "listElement";
+                   }else{
+                        document.getElementById(index).className = "listElement-selected"
+                   }
+               })
+
+            })
+            document.querySelector(".list").appendChild(itemList)
+            if(index === 0){
+                changeContent(item)
+            }
+        })
+
+    }
+</script>
+</html>
